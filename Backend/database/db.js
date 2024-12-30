@@ -1,16 +1,15 @@
-const mongoose = require('mongoose')
-const dotenv = require('dotenv');
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 dotenv.config();
 
-const DBConnection = async ()=> {
+
+export const DBConnection = async ()=> {
     const MONGODB_URL = process.env.MONGODB_URI;
     try {
-        await mongoose.connect(MONGODB_URL, {useNewUrlParser:true});
-        console.log("DB Connection established");
+        await mongoose.connect(MONGODB_URL);
+        console.log("Mongo DB Connection established");
     }catch (error)
     {
         console.log("Error Connecting to MongoDB" + error);
     }
 };
-
-module.exports = {DBConnection};
