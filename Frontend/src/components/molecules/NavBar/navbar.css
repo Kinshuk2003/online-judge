@@ -1,0 +1,133 @@
+.header {
+    background-color: #ffffff;
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .leetcode-logo {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+  
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+  }
+  
+  .nav-item {
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .nav-item:hover {
+    background-color: #f5f5f5;
+    color: #262626;
+  }
+  
+  .with-dropdown .dropdown-icon {
+    font-size: 12px;
+    margin-left: 2px;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    color: #595959;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  .icon-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .winter-theme {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .snowflake {
+    color: #40a7e3;
+    font-size: 20px;
+  }
+  
+  .snowflake.small {
+    font-size: 16px;
+    margin-top: -2px;
+  }
+  
+  .notification {
+    color: #595959;
+  }
+  
+  .count {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: #ff375f;
+    color: white;
+    font-size: 10px;
+    padding: 1px 4px;
+    border-radius: 8px;
+    min-width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .premium-button {
+    background: linear-gradient(90deg, #ffa116 0%, #ff9215 100%);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .premium-button:hover {
+    opacity: 0.9;
+  }
+  
+  .profile {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+  }
