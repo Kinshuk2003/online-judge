@@ -5,6 +5,8 @@ import Contest from "./pages/Contest";
 import Discuss from "./pages/Discuss";
 import Interview from "./pages/Interview";
 import Store from "./pages/Store";
+import ProblemPlayground from "./pages/ProblemPlayground";
+
 
 
 
@@ -13,7 +15,8 @@ export default function Router() {
     return (
         <Routes>
             <Route path="/" element={<Explore />} />
-            <Route path="/problems" element={<Problems />} />
+            <Route path="/problem-list" element={<Problems />} />
+            <Route path="/problems/:path" element={<ProblemPlayground />} />
             <Route path="/contest" element={<Contest />} />
             <Route path="/discuss" element={<Discuss />} />
             <Route path="/interview" element={<Interview />} />

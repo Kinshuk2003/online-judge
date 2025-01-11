@@ -14,7 +14,7 @@ export const  NavBar = () => {
           </div>
         <nav className="main-nav">
           <Link to="/" className="nav-item">Explore</Link>
-          <Link to="/problems" className="nav-item">Problems</Link>
+          <Link to="/problem-list" className="nav-item">Problems</Link>
           <Link to="/contest" className="nav-item">Contest</Link>
           <Link to="/discuss" className="nav-item">Discuss</Link>
           <Link to="/interview" className="nav-item with-dropdown">
