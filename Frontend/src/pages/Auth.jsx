@@ -5,7 +5,7 @@ import { loginApi, registerApi } from '../api/auth';
 import { useNavigate } from 'react-router-dom';
 
 export default function AuthForm() {
-    const Navigator = useNavigate();
+  const Navigator = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: '',
@@ -25,20 +25,15 @@ export default function AuthForm() {
     });
   };
 
-    const handletoggle = () => {
-        setIsLogin(!isLogin)
-        // setFormData({
-        //     email: '',
-        //     password: '',
-        //     username: ''
-        // });
-    };
+  const handletoggle = () => {
+    setIsLogin(!isLogin);
+  };
 
   useEffect(() => {
     const authenticateUser = async () => {
-      const response = isLogin ? await loginApi(JSON.stringify({email: formData.email, password: formData.password}))  : await registerApi(JSON.stringify({email: formData.email, password: formData.password, username: formData.username}));
-      if (response) {
-        login(response.token);
+      const responseData = isLogin ? await loginApi(JSON.stringify({email: formData.email, password: formData.password}))  : await registerApi(JSON.stringify({email: formData.email, password: formData.password, username: formData.username}));
+      if (responseData) {
+        login();
         // Redirect to another page or update state
         Navigator('/');
       } else {

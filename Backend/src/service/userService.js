@@ -15,7 +15,11 @@ export const registerUser = async  ( {username, email, password}) => {
 
     // create the user
     const user = await createUserRepository({username, email, password});
-    return user;
+    const token = generateToken(user);
+    return {
+        token: token,
+        user: user
+    };
 }
 
 export const loginUser = async  ( {email, password}) => {

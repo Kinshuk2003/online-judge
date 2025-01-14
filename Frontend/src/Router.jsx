@@ -15,6 +15,7 @@ import PrivateRoute from "./PrivateRoute";
 export default function Router() {
     return (
         <Routes>
+            <Route path="/auth" element={<AuthModal />} />
             <Route path="/" element={<Explore />} />
             <Route element={<PrivateRoute/>}>
                 <Route path="/explore" element={<Explore />} /> 
@@ -25,7 +26,6 @@ export default function Router() {
                 <Route path="/interview" element={<Interview />} />
                 <Route path="/store" element={<Store />} />
             </Route>
-            <Route path="/auth" element={<AuthModal />} />
         </Routes>
     )
 }
