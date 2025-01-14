@@ -1,7 +1,5 @@
 import React from 'react';
-import { Menu } from 'lucide-react';
-import { FaSearch, FaBell, FaUser, FaCaretDown, FaGift } from 'react-icons/fa';
-import { BiTime } from 'react-icons/bi';
+import { FaBell, FaUser, FaCaretDown} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import "./navbar.css";
 
@@ -32,7 +30,7 @@ export const  NavBar = () => {
           <FaBell />
         </button>
         
-        <button className="icon-button profile">
+        <button className="icon-button profile" onClick={() => {}}>
           <FaUser />
         </button>
       </div>

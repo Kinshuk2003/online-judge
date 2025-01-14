@@ -3,10 +3,11 @@ import { registerUser as registerUserService, loginUser as loginUserService } fr
 
 export async function loginUser(req, res) {
 try {
-   console.log(req.body, req.body.email, req.body.password);
+   // Parse the JSON string if necessary
+   const requestBody = typeof req.body.body === 'string' ? JSON.parse(req.body.body) : req.body.body;
    const {token, user} = await loginUserService({
-       email: req.body.email,
-       password: req.body.password
+       email: requestBody.email,
+       password: requestBody.password
    });
 
    res.cookie("token", token, {
@@ -23,10 +24,13 @@ try {
 
 export async function registerUser(req, res) {
 try {
+   // Parse the JSON string if necessary
+   const requestBody = typeof req.body.body === 'string' ? JSON.parse(req.body.body) : req.body.body;
+
    const userResponse = await registerUserService({
-       username: req.body.username,
-       email: req.body.email,
-       password: req.body.password
+       username: requestBody.username,
+       email: requestBody.email,
+       password: requestBody.password
    });
    return res.status(201).json({message: "User Signed Up Successfully"});
    
